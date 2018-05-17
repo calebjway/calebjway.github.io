@@ -1,3 +1,4 @@
 function Default(){
-  document.write("TestFunct");
+  var today = new Date();
+  document.write(today.toDateString());
 }
