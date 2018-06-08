@@ -12,10 +12,10 @@ function animate() {
         let x2=canvas.width/2+80*Math.sin(counter/Math.PI/4+Math.PI);
         let y2=canvas.height/2+80*Math.cos(counter/Math.PI/4+Math.PI);
 
-        circle(x1,y1,80,'rgb(0,0,255)');
-        circle(x2,y2,80, 'rgb(255,0,0)');
-        circle(x1,y1,10,'rgb(255,0,0)');
-        circle(x2,y2,10,'rgb(0,0,255)');
+        circle(x1,y1,80,'rgb(255,255,255)');
+        circle(x2,y2,80, 'rgb(0,0,0)');
+        circle(x2,y2,10,'rgb(255,255,255)');
+        circle(x1,y1,10,'rgb(0,0,0)');
         counter++;
         window.requestAnimationFrame(animate);
 }
