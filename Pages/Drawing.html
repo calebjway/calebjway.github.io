@@ -1,13 +1,17 @@
 <!--Source http://slicker.me/javascript/yinyang.htm-->
 <!DOCTYPE html>
 <html>
+<html lang="en">
   <head>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" href="Style\Base.css">
     <script src="Scripts/Drawing.js"></script>
     <title>Drawing</title>
   </head>
   <body>
     <canvas id="myCanvas" width="400" height="400"></canvas>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+    <canvas id="myCanvasTest" width="400" height="400" style="border:1px solid #000000;"></canvas>
     <p>
       <script>
         let canvas = document.getElementById('myCanvas');
@@ -16,6 +20,23 @@
         window.requestAnimationFrame(animate);
       </script>
     </p>
+
+    <p>
+      <script>
+        let canvasTest = document.getElementById('myCanvasTest');
+        let contextTest = canvasTest.getContext('2d');
+        let counterTest =0;
+        //window.requestAnimationFrame(animateTest);
+      </script>
+    </p>
+
+    <p>
+      <form>
+        Enter Red amount    <input type="text" id="RedAmount"><br>
+        Enter Green amount  <input type="text" id="GreenAmount"><br>
+        Enter Blue amount   <input type="text" id="BlueAmount"><br>
+        <input Value="Generate 2nd Circle" type="button" name="MakeColor" onclick="animateTest()">
+      </form>
     <p>
       <a href="Index.html">Return to Index</a>
     </P>
