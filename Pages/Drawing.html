@@ -5,10 +5,10 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="Style\Base.css">
     <script src="Scripts/Drawing.js"></script>
+    <script src="Resources/w3color.js"></script>
     <title>Drawing</title>
   </head>
   <body>
-    <canvas id="myCanvas" width="400" height="400"></canvas>
     <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
     <canvas id="myCanvasTest" width="400" height="400" style="border:1px solid #000000;"></canvas>
     <p>
@@ -31,11 +31,34 @@
 
     <p>
       <form>
-        Enter Red amount    <input type="text" id="RedAmount"><br>
-        Enter Green amount  <input type="text" id="GreenAmount"><br>
-        Enter Blue amount   <input type="text" id="BlueAmount"><br>
-        <input Value="Generate 2nd Circle" type="button" name="MakeColor" onclick="animateTest()">
+        Select Color   <input type="color" value="#000000" id="ColorPicker"><br>
+        <input Value="Generate 2nd Circle" type="button" name="MakeColor" onclick="StartTest()">
       </form>
+      <script>
+      let userColor = "rgb(0,0,0)";
+      let userColorIn = "rgb(255,255,255)";
+      let curFrame;
+      let buttonClicked = 0;
+        function StartTest(){
+          buttonClicked =1;
+          if(counterTest!=0 && buttonClicked==1){
+            contextTest.clearRect(0,0,canvasTest.width,canvasTest.height);
+            counterTest=0;
+            window.cancelAnimationFrame(curFrame);
+            //alert("attempted cancel");
+          }
+          var ChosenColor = document.getElementById("ColorPicker").value;
+          //alert(ChosenColor);
+          var cC = w3color(ChosenColor);
+          var redIn = 255-cC.red;
+          var greenIn = 255-cC.green;
+          var blueIn = 255-cC.blue
+          userColor = cC.toRgbString();
+          userColorIn = "rgb("+redIn+","+greenIn+","+blueIn+")";
+          window.requestAnimationFrame(animateTest);
+        }
+      </script>
+    </p>
     <p>
       <a href="Index.html">Return to Index</a>
     </P>
