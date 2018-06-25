@@ -33,3 +33,29 @@ function removeVowels(str){
   noVowel = noVowel.replace('U','');
   return noVowel;
 }
+
+function addUp(num) {
+	var x=0;
+	var sum=0;
+	while(x<=num){
+		sum+=x;
+		x++;
+	}
+	return sum;
+}
+
+function factorial(int) {
+	var total = 1;
+	for(var x= 1; x<=int;x++){
+		total = total *x;
+	}
+	return total;
+}
+
+function repeat(item, times) {
+	var arr = new Array();
+	for(var x=0; x<times;x++){
+		arr[x]=item;
+	}
+	return arr;
+}
