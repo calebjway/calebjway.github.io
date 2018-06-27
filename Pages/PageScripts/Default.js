@@ -11,7 +11,7 @@ function timer(){
     s = checkTime(s);
     document.getElementById("clockArea").innerHTML = "Current Time: "+
     h + ":" + m + ":" + s;
-    var t = setTimeout(timer, 500);
+    var t = setTimeout(timer, 200);
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10

@@ -8,3 +8,12 @@ function doubleChar(str) {
 	}
 	return dblstr;
 }
+
+function doubleStrAdd(inputElement,textElement){
+	var str = document.getElementById(inputElement).value;
+	if(str==''){
+		return;
+	}
+	var curString = document.getElementById(textElement).innerHTML;
+	document.getElementById(textElement).innerHTML = doubleChar(str) +"</br>" +curString;
+}
