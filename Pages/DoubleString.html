@@ -7,12 +7,27 @@
     <title>Double Strings</title>
   </head>
   <body>
+    <!--<script>
+      function doubleStrAdd(){
+        var str = document.getElementById('inputString').value;
+        if(str==''){
+          return;
+        }
+        var curString = document.getElementById('textArea').innerHTML;
+        document.getElementById('textArea').innerHTML = doubleChar(str) +"</br>" +curString;
+      }
+    </script>-->
     <p>
-      <script>
-
-
-      </script>
+      Enter a value in the textbox that you want doubled.</br>
+      Click Submit when you are ready.</br>
+      Example: TTeesstt
+      </br>
+      <input type="text" value="Test" id="inputString">
+    <button onclick="doubleStrAdd('inputString','textArea')">Submit</button>
     </p>
+
+    <div id="textArea">
+    </div>
     <p>
       <a href="../index.html">Return to Index</a>
     </P>
