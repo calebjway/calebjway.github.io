@@ -1,7 +1,7 @@
 function clearElement(clearName){
-	document.getElementById(clearName.innerHTML ='';
+	document.getElementById(clearName).innerHTML ='';
 }
-				
+
 function find_index(lst, str) {
 	return lst.indexOf(str);
 }
