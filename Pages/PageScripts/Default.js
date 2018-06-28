@@ -18,7 +18,7 @@ function timer(){
       s = checkTime(s);
       document.getElementById("clockArea").innerHTML = "Current Time: "+
       h + ":" + m + ":" + s;
-      var t = setTimeout(timer, 200);
+      var t = setTimeout(timer, 100);
     }
 }
 function checkTime(i) {
