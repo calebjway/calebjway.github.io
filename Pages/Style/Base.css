@@ -1,1 +1,2 @@
 body {background-color: DarkGrey;}
+div.footer {background-color: DarkGrey; position: fixed; bottom: 0; width: 100%;}

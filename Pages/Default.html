@@ -4,20 +4,30 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="Style\Base.css">
     <script src="PageScripts/Default.js"></script>
+    <script src="Resources/w3color.js"></script>
+    <script>
+      let raveClicked =0;
+      let counter=0;
+      let invert=0;
+      let colorVar = new w3color("#000000");
+    </script>
     <title>Default Page</title>
   </head>
   <body onload="timer()">
-    
+    <h1>Simple Scripts</h1>
     <p>Today's Date:
       <script>
         Default();
       </script>
     </p>
-
-    <div  id="clockArea"></div>
+    <div style="display: inline;" id="clockArea"></div>
+    <p>
+      Click the button to make the time rave. Click again to make it stop.</br>
+      <input type="button" value="Rave" id="buttonRave" onclick="Rave()">
+    </p>
 
     <p>
       <a href="../index.html">Return to Index</a>
-    </P>
+    </p>
   </body>
 </html>
