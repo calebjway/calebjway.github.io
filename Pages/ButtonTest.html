@@ -5,13 +5,33 @@
     <link rel="stylesheet" href="Style\Base.css">
     <script src="PageScripts/ButtonTest.js"></script>
     <title>Button Testing Page</title>
+    <script>
+    let clearText =0;
+    let arrUser = new Array();
+    </script>
   </head>
   <body>
-    <p>
-      <script>
-        //Default();
-      </script>
-    </p>
+    <p>Enter numbers into the below box and then click the button to add to a list.</br>
+      Click activate to get information on the numbers you enter.</p>
+    <input type="text" id="numBox" placeholder="Enter numbers">
+    <input type="button" value="Add Number" onclick="addValue()">
+    <input type="button" value="Do Thing" onclick="activate()">
+    <script>
+      function addValue(){
+
+      }
+      function activate(){
+
+      }
+      /*function removeAuto(){
+
+        if(clearText==0){
+          document.getElementById("numBox").value="";
+        }
+        clearText++;
+        //alert();
+      }*/
+    </script>
     <p>
       <a href="../index.html">Return to Index</a>
     </P>
