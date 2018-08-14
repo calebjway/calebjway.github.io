@@ -54,14 +54,16 @@ function mathStats(arr,hideBtn){
   makeMessage();
   document.getElementById("mathStatsDiv").innerHTML=mathText;
   document.getElementById("overallStatsDiv").innerHTML=overText;
-  document.getElementById("addButton").disabled=true;
+  document.getElementById("addBtn").disabled=true;
+  document.getElementById("mathBtn").disabled=true;
 }
 
 function hideStats(){
   document.getElementById("hideBtn").style.visibility = "hidden";
   document.getElementById("mathStatsDiv").style.visibility="hidden";
   document.getElementById("mathStatsDiv").innerHTML="";
-  document.getElementById("addButton").disabled=false;
+  document.getElementById("addBtn").disabled=false;
+  document.getElementById("mathBtn").disabled=false;
   document.getElementById("numAdd").innerHTML = "Numbers: ";
   arrUser.length=0;
   arrCount=0;
