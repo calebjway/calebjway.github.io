@@ -14,27 +14,33 @@
     <p>Enter numbers into the below box and then click the button to add to a list.</br>
       Click activate to get information on the numbers you enter.</p>
     <input type="text" id="numBox" placeholder="Enter whole numbers">
-    <input type="button" value="Add Number" onclick="addValue()">
+    <input type="button" id="addButton" value="Add Number" onclick="addValue()">
     <input type="button" value="Math Stats" onclick="mathStats(arrUser,hideBtn.id)">
     <input type="button" value="Hide Stats" onclick="hideStats()" id="hideBtn" style="visibility:hidden;">
+    <div id="numAdd">
+      Numbers:
+    </div>
+    <br>
     <script>
       function addValue(){
         var curNum = document.getElementById("numBox").value;
         if(Number.isInteger(Number(curNum))){
           arrUser[arrCount] = curNum;
           arrCount++;
+          document.getElementById("numAdd").innerHTML = "Numbers: " +arrUser;
         }
         else{
           alert('Value ' +curNum +' is not a number. Please enter a valid number');
         }
         document.getElementById("numBox").value="";
+
       }
       /*function activate(){
           mathStats(arrUser,hideBtn.id);
       }*/
-      function hide(){
+      /*function hide(){
         document.getElementById("hideBtn").style.visibility = "hidden";
-      }
+      }*/
       /*function removeAuto(){
 
         if(clearText==0){
@@ -45,6 +51,9 @@
       }*/
     </script>
     <div id="mathStatsDiv" style="visibility:hidden">
+    </div>
+    <br>
+    <div id="overallStatsDiv" style="visibility:hidden">
     </div>
     <p>
       <a href="../index.html">Return to Index</a>
