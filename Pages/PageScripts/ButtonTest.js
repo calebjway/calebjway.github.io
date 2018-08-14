@@ -62,6 +62,7 @@ function hideStats(){
   document.getElementById("mathStatsDiv").style.visibility="hidden";
   document.getElementById("mathStatsDiv").innerHTML="";
   document.getElementById("addButton").disabled=false;
+  document.getElementById("numAdd").innerHTML = "Numbers: ";
   arrUser.length=0;
   arrCount=0;
 }
