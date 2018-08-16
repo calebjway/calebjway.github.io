@@ -5,20 +5,44 @@
     <link rel="stylesheet" href="Pages\Style\Base.css">
     <title>PDF Viewer</title>
     <style>
-    html, body, #fullheight {
+    html, body,  #fullheight {
       min-height: 100% !important;
       height: 100%;
       margin:0;
       padding:0;
-      background-color: #444;
+      background-color: DarkGrey/*#444*/;
+    }
+    div{
+      position: absolute;
+      min-height: 100% !important;
+      height: 100%;
+      width: 100%;
+      margin:0;
+      padding:0;
+      background-color: DarkGrey/*#444*/
     }
     </style>
+    <script src="PageScripts/PdfViewer.js"></script>
   </head>
-  <body height="99%" width="100%">
-    <object data="https://calebjway.github.io/Pages/Resources/Docs/UA-Eladrin-Gith.pdf" type="application/pdf" width="100%" height="95%">
-    <embed src="https://calebjway.github.io/Pages/Resources/Docs/UA-Eladrin-Gith.pdf" width="100%" height="100%" />
-        <p>This browser does not support PDFs. Please download the PDF to view it:
-        <a href="https://calebjway.github.io/Pages/Resources/Docs/UA-Eladrin-Gith.pdf">Download PDF</a>.</p>
-    </embed></object>
+  <body>
+    <div id="pdfSelector">
+      Please select a file to view:
+      <ul onclick="displayPDF('https://calebjway.github.io/Pages/Resources/Docs/PHB.pdf');">PHB</ul>
+      <ul onclick="displayPDF('https://calebjway.github.io/Pages/Resources/Docs/EE_PlayersCompanion.pdf');">EE</ul>
+      <ul onclick="displayPDF('https://calebjway.github.io/Pages/Resources/Docs/UA_Downtime.pdf');">Downtime</ul>
+      <ul onclick="displayPDF('https://calebjway.github.io/Pages/Resources/Docs/UA-Eladrin-Gith.pdf');">Eladrin+Gith</ul>
+      <ul onclick="displayPDF('https://calebjway.github.io/Pages/Resources/Docs/UA-ElfSubraces.pdf');">Elf Subraces</ul>
+    </div>
+    <div id="pdfContainer" style="visibility:hidden;">
+      <!--<object data="https://calebjway.github.io/Pages/Resources/Docs/UA-Eladrin-Gith.pdf" type="application/pdf" width="100%" height="95%">
+        <embed src="https://calebjway.github.io/Pages/Resources/Docs/UA-Eladrin-Gith.pdf" width="100%" height="950%" />
+          <p>This browser does not support PDFs. Please download the PDF to view it:
+          <a href="https://calebjway.github.io/Pages/Resources/Docs/UA-Eladrin-Gith.pdf">Download PDF</a>.</p>
+        </embed>
+      </object>-->
+    </div>
+    <script>
+      //displayPDF();
+    </script>
   </body>
 </html>
