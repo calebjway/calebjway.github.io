@@ -1,4 +1,4 @@
-html, body, #fullheight {
+html, body, .fullheight {
   min-height: 100% !important;
   height: 100%;
   width: 100%;
