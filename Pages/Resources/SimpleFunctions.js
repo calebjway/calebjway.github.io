@@ -1,7 +1,23 @@
+//Simplified function to empty out the element. Primarily used to clear out a DIV that is displaying results from another function
 function clearElement(clearName){
 	document.getElementById(clearName).innerHTML ='';
 }
 
+//Simplified function to update an element with a value. Can be used in tandem with another function.
+function updateElement(value,elementName){
+  document.getElementById(elementName).innerHTML = value;
+}
+
+function emptyBox(elementName){
+  if(document.getElementById(elementName).value == ""){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+//Simplified function to find the index of 
 function find_index(lst, str) {
 	return lst.indexOf(str);
 }
@@ -62,4 +78,19 @@ function repeat(item, times) {
 		arr[x]=item;
 	}
 	return arr;
+}
+
+function checkArray(elementName){
+  var value = document.getElementById(elementName).value;
+  var arr;
+  try{
+    arr = value.split(",");
+  }
+  catch
+  {
+    arr = [0,1];
+  }
+  finally{
+    return arr;
+  }
 }

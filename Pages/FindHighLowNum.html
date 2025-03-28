@@ -4,17 +4,27 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="Style\Base.css">
     <script src="PageScripts/FindHighLowNum.js"></script>
+    <script src="Resources/SimpleFunctions.js"></script>
     <title>Find High & Low</title>
   </head>
   <body>
     <p>
-      Default Array = 1,5,7,2,9,24,60
-      </br>
+      Example Array = [1,5,7,2,9,24,60]
       </br>
       <script>
         FindHighLow([1,5,7,2,9,24,60]);
       </script>
+      </br>
     </p>
+    <p>
+      Feel free to enter an array below (seperated by commas) and then click the submit button.
+      </br>
+      <input type="text" id="inputString">
+      <button onclick="updateElement(FindHighLow(checkArray('inputString')),'Display')">Submit</button> <button onclick="clearElement('Display')">Clear</button>
+    </p>
+    <div id="Display">
+
+    </div>
     <p>
       <a href="../index.html">Return to Index</a>
     </P>
